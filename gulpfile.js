@@ -8,6 +8,8 @@ const autoprefixer = require('autoprefixer');
 const mediaquery = require('postcss-combine-media-query');
 const cssnano = require('cssnano');
 const htmlMinify = require('html-minifier');
+const build = gulp.series(clean, gulp.parallel(html, css, images, fonts));
+const watchapp = gulp.parallel(build, watchFiles, serve);
 
 function html() {
   const options = {
@@ -31,15 +33,13 @@ return gulp.src('src/**/*.html')
       .pipe(browserSync.reload({stream: true}));
 }
 
-exports.html = html;
-
 function css() {
   const plugins = [
     autoprefixer(),
     mediaquery(),
     cssnano()
   ]
-return gulp.src('src/blocks/**/*.css')
+return gulp.src('src/**/*.css')
       .pipe(plumber())
       .pipe(concat('bundle.css'))
       .pipe(postcss(plugins))
@@ -47,33 +47,21 @@ return gulp.src('src/blocks/**/*.css')
       .pipe(browserSync.reload({stream: true}));
 }
 
-exports.css = css;
-
 function images() {
   return gulp.src('src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}')
             .pipe(gulp.dest('dist/images'))
             .pipe(browserSync.reload({stream: true}));
 }
 
-exports.images = images;
-
 function fonts() {
-  return gulp.src('src/fonts/**/*.{css,woff,woff2}')
+  return gulp.src('src/fonts/**/*.{woff,woff2}')
             .pipe(gulp.dest('dist/fonts'))
             .pipe(browserSync.reload({stream: true}));
 }
 
-exports.fonts = fonts;
-
 function clean() {
   return del('dist');
 }
-
-exports.clean = clean;
-
-const build = gulp.series(clean, gulp.parallel(html, css, images, fonts));
-
-exports.build = build;
 
 function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
@@ -81,11 +69,6 @@ function watchFiles() {
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
   gulp.watch(['src/fonts/**/*.{css,woff,woff2}'], fonts);
 }
-
-const watchapp = parallel(build, watchFiles, serve);
-
-exports.watchapp = watchapp; 
-
 
 function serve() {
   browserSync.init({
@@ -95,4 +78,11 @@ function serve() {
   });
 }
 
+exports.watchapp = watchapp; 
+exports.html = html;
+exports.css = css;
+exports.images = images;
+exports.fonts = fonts;
+exports.clean = clean;
 exports.default = watchapp;
+exports.build = build;
