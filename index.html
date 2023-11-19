@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -18,14 +19,14 @@
 
   <body class="page">
     <header class="header decorated-zone">
-      <p>REC</p>
+      <div class="header__bulb" aria-hidden="true"></div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_light"
             >
-              День
+              день
             </button>
           </li>
           <li class="header__theme-menu-item">
@@ -33,43 +34,48 @@
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
               disabled
             >
-              Авто
+              авто
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_dark"
             >
-              Неон
+              неон
             </button>
           </li>
         </ul>
       </nav>
-      <h1>no focus</h1>
-      <p>
-        Что делать, когда не можешь делать ничего Или почему нам так сложно
+      <h1 class="header__heading decorated_heading">no focus</h1>
+      <p class="header__paragraph title-decor">
+        Что делать, когда не можешь делать ничего<br />Или почему нам так сложно
         сконцентрироваться, особенно когда очень надо
       </p>
     </header>
-    <main>
-      <section>
-        <h2>Почему сосредоточиться так сложно</h2>
-        <article>
-          <h3>Многозадачность</h3>
-          <p>
+    <main class="main">
+      <section class="content_section causes">
+        <h2 class="section_heading">Почему сосредоточиться так сложно</h2>
+        <article class="content_card">
+          <h3 class="card_heading title-decor">Многозадачность</h3>
+          <p class="card_paragraph">
             Особенно сложно сосредоточиться, когда задач много и все они —
             важные. Где же легендарная многозадачность, когда она так нужна вам
             (и всем нанимающим менеджерам этого мира)? А дело в том, что её
-            просто не существует. Исследователи выяснили, что мозгу тяжело
-            концентрироваться даже на двух делах одновременно. А когда в поле
-            внимания попадает несколько важных задач, организм паникует и
-            выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
-            работаем невнимательно: ошибаемся и быстро устаём.
+            просто не существует. Исследователи
+            <a
+              href="https://dana.org/article/multicosts-of-multitasking/"
+              target="_blank"
+              >выяснили</a
+            >, что мозгу тяжело концентрироваться даже на двух делах
+            одновременно. А когда в поле внимания попадает несколько важных
+            задач, организм паникует и выделяет кортизол и адреналин — «гормоны
+            стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро
+            устаём.
           </p>
         </article>
-        <article>
-          <h3>Дофамин</h3>
-          <p>
+        <article class="content_card">
+          <h3 class="card_heading title-decor">Дофамин</h3>
+          <p class="card_paragraph">
             С гормонами стресса всё понятно, но дальше — ещё интереснее. В нашей
             невозможности сосредоточиться замешана и полная противоположность
             стрессу — дофамин. Это вещество участвует в системе вознаграждения
@@ -81,11 +87,11 @@
           </p>
         </article>
       </section>
-      <section>
-        <h2>Что снижает концентрацию внимания?</h2>
-        <article>
-          <h3>Многозадачность</h3>
-          <p>
+      <section class="content_section what">
+        <h2 class="section_heading">Что снижает концентрацию внимания?</h2>
+        <article class="content_card">
+          <h3 class="card_heading title-decor">Многозадачность</h3>
+          <p class="card_paragraph">
             Как концентрация может снижаться из-за… концентрации? Любая
             стрессовая ситуация (и резко меняющийся мир в целом) заставляет наш
             мозг постоянно «сканировать» окружающую среду на предмет опасности.
@@ -94,9 +100,9 @@
             не давать ей отдохнуть.
           </p>
         </article>
-        <article>
-          <h3>Еда</h3>
-          <p>
+        <article class="content_card">
+          <h3 class="card_heading title-decor">Еда</h3>
+          <p class="card_paragraph">
             «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
             доставляют в мозг энергию и помогают ему лучше работать. Но уходит
             эта энергия также быстро, как и приходит. А мы в результате попадаем
@@ -105,9 +111,9 @@
             больше быстрых углеводов.
           </p>
         </article>
-        <article>
-          <h3>Гаджеты</h3>
-          <p>
+        <article class="content_card">
+          <h3 class="card_heading title-decor">Гаджеты</h3>
+          <p class="card_paragraph">
             Да-да, это та самая ситуация, когда на экране ноутбука — код, в
             наушниках — подкаст, а на компьютере фоном — ещё и видео с забавными
             утятами. В результате мозг пытается переключиться с одной задачи на
@@ -118,16 +124,20 @@
           </p>
         </article>
       </section>
-      <section>
-        <h2>
+      <section class="content_section how">
+        <h2 class="section_heading">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        <article>
-          <h3>5 простых (на самом деле не очень) советов</h3>
-          <article>
-            <h4>Представьте небо и облака</h4>
-            <p>
+        <article class="content_card card_container">
+          <h3 class="card_heading title-decor">
+            5 простых (на самом деле не очень) советов
+          </h3>
+          <article class="content_card">
+            <h4 class="card_heading subtitle-decor">
+              Представьте небо и облака
+            </h4>
+            <p class="card_paragraph">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
               успокоиться. Ведь часто именно тревожные мысли о сложных задачах
               как раз и мешают эти сложные задачи делать. В такие моменты можно
@@ -138,39 +148,42 @@
               проблемах из будущего.
             </p>
           </article>
-          <article>
-            <h4>Включите музыку</h4>
-            <p>
+          <article class="content_card">
+            <h4 class="card_heading subtitle-decor">Включите музыку</h4>
+            <p class="card_paragraph">
               Но не любую, и не любимую. Любимая может быть связана с сильными
               положительными эмоциями, которые тоже очень сильно отвлекают.
               Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще
               попробовать включить плейлист в «белым шумом» или нейромузыкой.
             </p>
           </article>
-          <article>
-            <h4>Прогуляйтесь</h4>
-            <p>
+          <article class="content_card">
+            <h4 class="card_heading subtitle-decor">Прогуляйтесь</h4>
+            <p class="card_paragraph">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-              показал, что созерцание природы повышает концентрацию, в то время
-              как после просмотра городских пейзажей она наоборот понижается.
-              Можно совместить прогулку с физическими упражнениями или бегом —
-              так в мозг поступит ещё больше кислорода и он будет лучше
-              работать. Но и простая двадцатиминутная прогулка — тоже отличный
-              вариант.
+              <a
+                href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                target="_blank"
+                >показал</a
+              >, что созерцание природы повышает концентрацию, в то время как
+              после просмотра городских пейзажей она наоборот понижается. Можно
+              совместить прогулку с физическими упражнениями или бегом — так в
+              мозг поступит ещё больше кислорода и он будет лучше работать. Но и
+              простая двадцатиминутная прогулка — тоже отличный вариант.
             </p>
           </article>
-          <article>
-            <h4>Хорошо ешьте</h4>
-            <p>
+          <article class="content_card">
+            <h4 class="card_heading subtitle-decor">Хорошо ешьте</h4>
+            <p class="card_paragraph">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
               высоким содержанием клетчатки: овощи, ягоды, бобовые (нут,
               чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
             </p>
           </article>
-          <article>
-            <h4>Читайте</h4>
-            <p>
+          <article class="content_card">
+            <h4 class="card_heading subtitle-decor">Читайте</h4>
+            <p class="card_paragraph">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или
               даже секунд. А вот интересная книга способна затянуть и на
@@ -178,21 +191,40 @@
             </p>
           </article>
         </article>
-        <article>
-          <h3>А можно в картинках?</h3>
-          <div>
-            <img src="./images/sunset.png" />
-            <img src="./images/ice-cream.png" />
-            <img src="./images/tape.png" />
-            <img src="./images/books.png" />
-            <img src="./images/street.png" />
+      </section>
+      <section class="content_section pictures">
+        <article class="content_card card_container">
+          <h3 class="card_heading title-decor">А можно в картинках?</h3>
+          <div class="pictures__container">
+            <img
+              src="./images/sunset.png"
+              alt="Изображение рассвета в розовых тонах"
+            />
+            <img
+              src="./images/ice-cream.png"
+              alt="Изображение тарелки, на которой нарисована улыбка. 
+              Внутри тарелки фрукты и крем, в котором лежат шарики с разными нарисованными лицами"
+            />
+            <img
+              src="./images/tape.png"
+              alt="Изображение аудиокассеты, вокруг которой расположены компьютерные элементы: значки курсора, папок, окон"
+            />
+            <img
+              src="./images/books.png"
+              alt="Изображение стопки полезных книг: энциклопедий и словарей. 
+            На стопке сверху стоит чашка с напитком и надписью 'Read more'"
+            />
+            <img
+              src="./images/street.png"
+              alt="Изображение пустой улицы в розово-фиолетовых тонах"
+            />
           </div>
         </article>
       </section>
     </main>
-    <footer>
-      <h2>focus</h2>
+    <footer class="footer decorated-zone">
+      <h2 class="footer__heading decorated_heading">focus</h2>
     </footer>
-    <script src="../scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
