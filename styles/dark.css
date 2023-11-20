@@ -4,9 +4,144 @@
   переключая тему
 */
 
+:root.theme-dark {
+  --main-color: #f1b2ce;
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --additional-color: #db00ff;
+}
+
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-color: #f1b2ce;
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --additional-color: #db00ff;
+  color: var(--main-color, #f1b2ce);
+  background-color: var(--bg-color, #000028);
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .header__bulb {
+  display: block;
+}
+
+.theme_dark .decorated-zone::before {
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+}
+
+.theme_dark .decorated-zone::after {
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.theme_dark .header__theme-menu {
+  color: var(--accent-color, #ff0070);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  /* stylelint-disable-next-line color-function-notation */
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color, #ff0070);
+}
+
+.theme_dark .decorated_heading {
+  color: var(--additional-color, #db00ff);
+}
+
+.theme_dark .title-decor {
+  color: var(--bg-color, #000028);
+  background-color: var(--accent-color, #ff0070);
+}
+
+.theme_dark .section_heading {
+  color: var(--accent-color, #ff0070);
+}
+
+.theme_dark .card_paragraph a {
+  text-shadow: 1.5px 1.5px 0 var(--accent-color, #ff0070);
+}
+
+.theme_dark .card_paragraph a:focus-visible {
+  border: 1px solid var(--main-color, #f1b2ce);
+}
+
+.theme_dark .subtitle-decor {
+  color: var(--bg-color, #000028);
+  background-color: var(--accent-color, #ff0070);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #f1b2ce;
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --additional-color: #db00ff;
+  }
+
+  .page {
+    --main-color: #f1b2ce;
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --additional-color: #db00ff;
+    color: var(--main-color, #f1b2ce);
+    background-color: var(--bg-color, #000028);
+    background-image: url(../images/cover-image-dark.png);
+  }
+
+  .header__bulb {
+    display: block;
+  }
+
+  .decorated-zone::before {
+    border-inline-end: 1px solid var(--accent-color, #ff0070);
+    border-block-start: 1px solid var(--accent-color, #ff0070);
+  }
+
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--accent-color, #ff0070);
+    border-block-end: 1px solid var(--accent-color, #ff0070);
+  }
+
+  .header__theme-menu {
+    color: var(--accent-color, #ff0070);
+  }
+
+  .header__theme-menu-button:hover {
+    /* stylelint-disable-next-line color-function-notation */
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--accent-color, #ff0070);
+  }
+
+  .decorated_heading {
+    color: var(--additional-color, #db00ff);
+  }
+
+  .theme_dark .title-decor {
+    color: var(--bg-color, #000028);
+    background-color: var(--accent-color, #ff0070);
+  }
+
+  .section_heading {
+    color: var(--accent-color, #ff0070);
+  }
+
+  .card_paragraph a {
+    text-shadow: 1.5px 1.5px 0 var(--accent-color, #ff0070);
+  }
+
+  .card_paragraph a:focus-visible {
+    border: 1px solid var(--main-color, #f1b2ce);
+  }
+
+  .subtitle-decor {
+    color: var(--bg-color, #000028);
+    background-color: var(--accent-color, #ff0070);
+  }
 }

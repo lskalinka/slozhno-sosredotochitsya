@@ -4,9 +4,155 @@
   переключая тему
 */
 
+:root.theme-light {
+  --main-color: #353430;
+  --bg-color: #f1b2ce;
+  --accent-color: #FF8DCB;
+  --additional-color: #ffc2e6;
+}
+
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-color: #353430;
+  --bg-color: #f1b2ce;
+  --accent-color: #FF8DCB;
+  --additional-color: #ffc2e6;
+  color: var(--main-color, #353430);
+  background-color: var(--bg-color, #f1b2ce);
+  background-image: url(../images/cover-image-light.png);
+}
+
+.theme_light .header__bulb {
+  display: none;
+}
+
+.theme_light .decorated-zone::before {
+  border-inline-end: 1px solid var(--main-color, #353430);
+  border-block-start: 1px solid var(--main-color, #353430);
+}
+
+.theme_light .decorated-zone::after {
+  border-inline-start: 1px solid var(--main-color, #353430);
+  border-block-end: 1px solid var(--main-color, #353430);
+}
+
+.theme_light .header__theme-menu {
+  color: var(--main-color, #353430);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  /* stylelint-disable-next-line color-function-notation */
+  border: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--main-color, #353430);
+}
+
+.theme_light .decorated_heading {
+  color: var(--additional-color, #ffc2e6);
+}
+
+.theme_light .title-decor {
+  color: var(--main-color, #353430);
+  background-color: var(--accent-color, #FF8DCB);
+}
+
+.theme_light .section_heading {
+  color: var(--main-color, #353430);
+}
+
+.theme_light .card_paragraph a {
+  text-shadow: 1.5px 1.5px 0 var(--accent-color, #FF8DCB);
+}
+
+.theme_light .card_paragraph a:focus-visible {
+  border: 1px solid var(--main-color, #353430);
+}
+
+.theme_light .subtitle-decor {
+  color: var(--main-color, #353430);
+  background-color: var(--accent-color, #FF8DCB);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: #353430;
+    --bg-color: #f1b2ce;
+    --accent-color: #FF8DCB;
+    --additional-color: #ffc2e6;
+  }
+
+  .page {
+    --main-color: #353430;
+    --bg-color: #f1b2ce;
+    --accent-color: #FF8DCB;
+    --additional-color: #ffc2e6;
+    color: var(--main-color, #353430);
+    background-color: var(--bg-color, #f1b2ce);
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .header__bulb {
+    display: none;
+  }
+
+  .decorated-zone::before {
+    border-inline-end: 1px solid var(--main-color, #353430);
+    border-block-start: 1px solid var(--main-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--main-color, #353430);
+    border-block-end: 1px solid var(--main-color, #353430);
+  }
+
+  .decorated-zone::before {
+    border-inline-end: 1px solid var(--main-color, #353430);
+    border-block-start: 1px solid var(--main-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-inline-start: 1px solid var(--main-color, #353430);
+    border-block-end: 1px solid var(--main-color, #353430);
+  }
+
+  .header__theme-menu {
+    color: var(--main-color, #353430);
+  }
+
+  .header__theme-menu-button:hover {
+    /* stylelint-disable-next-line color-function-notation */
+    border: 1px solid rgba(50, 49, 45, 0.40);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--main-color, #353430);
+  }
+
+  .decorated_heading {
+    color: var(--additional-color, #ffc2e6);
+  }
+
+  .title-decor {
+    color: var(--main-color, #353430);
+    background-color: var(--accent-color, #FF8DCB);
+  }
+
+  .section_heading {
+    color: var(--main-color, #353430);
+  }
+
+  .card_paragraph a {
+    text-shadow: 1.5px 1.5px 0 var(--accent-color, #FF8DCB);
+  }
+
+  .card_paragraph a:focus-visible {
+    border: 1px solid var(--main-color, #353430);
+  }
+
+  .subtitle-decor {
+    color: var(--main-color, #353430);
+    background-color: var(--accent-color, #FF8DCB);
+  }
+
 }
