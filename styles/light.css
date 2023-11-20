@@ -106,16 +106,6 @@
     border-block-end: 1px solid var(--main-color, #353430);
   }
 
-  .decorated-zone::before {
-    border-inline-end: 1px solid var(--main-color, #353430);
-    border-block-start: 1px solid var(--main-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-inline-start: 1px solid var(--main-color, #353430);
-    border-block-end: 1px solid var(--main-color, #353430);
-  }
-
   .header__theme-menu {
     color: var(--main-color, #353430);
   }
