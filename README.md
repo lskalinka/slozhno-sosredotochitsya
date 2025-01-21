@@ -1,3 +1,4 @@
-Проект «Сложно сосредоточиться»
-Страница о фокусах, помогающих поймать фокус (на деле)
-Ссылка на репозиторий проекта — https://github.com/lskalinka/slozhno-sosredotochitsya.git
+#Проект «Сложно сосредоточиться»
+Страница о фокусах, помогающих поймать фокус (на деле)<br>
+Стэк: HTML, CSS, JS<br>
+Демо: https://lskalinka.github.io/slozhno-sosredotochitsya/<br>
